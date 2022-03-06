@@ -9,10 +9,19 @@ class PixelPage extends StatelessWidget {
       body: NestedScrollView(headerSliverBuilder: (context, isScrolled){
         return [
           SliverAppBar(
+            pinned: true,
             expandedHeight: 200,
+            flexibleSpace: FlexibleSpaceBar(
+              background: Image.asset(
+                'assets/pixel_google.jpg',
+                fit: BoxFit.fitWidth,
+              ),
+              title: Text('Google Pixel'),
+              titlePadding: const EdgeInsets.only(left: 16, bottom: 16),
+            ),
           )
         ];
-      },body: null,),
+      },body: Container(),),
     );
   }
 }
